@@ -7,11 +7,10 @@ public class Main {
 
         for (Shape shape : shapes) {
             System.out.println(shape.getClass().getSimpleName() + ": " + shape.getArea());
-            if (shape instanceof Square) {
-                ((Square) shape).howToColor();
+            if (shape instanceof IColorable) {
+                ((IColorable) shape).howToColor();
             }
             System.out.println();
         }
-
     }
 }
